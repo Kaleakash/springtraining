@@ -1,0 +1,141 @@
+04-12-2018
+
+		Java 			Vs		.net 
+
+
+	Collection Framework 
+
+	JSE		JEE				JME 
+			Servlet, JSP and EJB 
+			Controller, View and Model 
+
+		Struts : Struts is open source framework. 
+		MVC  Architecture. 
+		Controller Centric framework. 
+
+		JSF : JSF : Java Servce Face : MVC architecture 
+		View Centrice Framework. 
+			JSF Vs HTML5/CSS3/Angular / React 
+		
+		Hibernate : JDBC ORM : DAO (Data Access Object ) 
+
+		Spring :Spring is open source framework. Spring also known as Layer architecture 
+		framework(Onion Architecture framework). 
+		
+		
+
+		Framework . 	70% to 80%
+
+		Spring Modules 
+	
+		
+			1. Spring Core 
+			2. Spring application context 
+		Using XML and Annotation 
+		Spring with DataSource : My SQL 
+		3. Spring JDBC 
+			
+		4. Spring ORM (Hibernate, JPA, iBaties) 
+			5. Spring MVC
+			6. Spring Rest 
+			
+			
+		akash300383@gmail.com 
+		
+		
+		10. Spring AOP 
+		
+			11. Spring boot 	80 to 80% 
+			12. Spring micro services 
+			13. Spring clouds 
+			
+			7. Spring security 
+			9. Spring testing 
+		12. 
+			Maven tool :
+			
+	Spring boot = Spring all modules - XML file + Few annotation + embedded Web Servers 
+								tomcat, 
+	Spring boot itself is stanalone project which help to create the web projects. 
+	
+	Spring Core 
+
+	IOC 	and 	DI 
+
+	Dependency Injection :
+
+			1. Constructor based 
+			2. Setter based 
+			3. Interface based 
+			
+
+			1. Using XMLfile 
+
+			2. Using Annotation 
+
+	Inversion of Control :
+
+	Container :
+
+	Server 
+
+		Web Server 
+				Tomcat 
+
+				MVC : Controller and View Model 
+		Application Server 
+					EJB :
+				Web Logic or jBoss 
+
+		POJO : 		
+
+	package com;
+	class Employee {
+		Employee() {
+		System.out.println("Object created....");
+		}
+		public void display() {
+		System.out.println("business method");
+		}
+	}	
+
+	beans.xml 
+
+	<beans>
+		<bean id="obj1" class="com.Employee"></bean>
+	</beans>
+
+	class DemoTest {
+		public static void  main(String args[]) {
+		//Employee emp = new Employee();
+		//emp.display();
+		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+		Employee emp = (Employee)ac.getBean("obj1");
+		emp.display();
+		}
+	}
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+		
