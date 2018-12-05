@@ -1,0 +1,323 @@
+03-12-2018	Day 1
+
+		Java 			Vs		.net 
+
+
+	Collection Framework 
+
+	JSE		JEE				JME 
+			Servlet, JSP and EJB 
+			Controller, View and Model 
+
+		Struts : Struts is open source framework. 
+		MVC  Architecture. 
+		Controller Centric framework. 
+
+		JSF : JSF : Java Servce Face : MVC architecture 
+		View Centrice Framework. 
+			JSF Vs HTML5/CSS3/Angular / React 
+		
+		Hibernate : JDBC ORM : DAO (Data Access Object ) 
+
+		Spring :Spring is open source framework. Spring also known as Layer architecture 
+		framework(Onion Architecture framework). 
+		
+		
+
+		Framework . 	70% to 80%
+
+		Spring Modules 
+	
+		
+			1. Spring Core 
+			2. Spring application context 
+		Using XML and Annotation 
+		Spring with DataSource : My SQL 
+		3. Spring JDBC 
+			
+		4. Spring ORM (Hibernate, JPA, iBaties) 
+			5. Spring MVC
+			6. Spring Rest 
+			
+			
+		akash300383@gmail.com 
+		
+		
+		10. Spring AOP 
+		
+			11. Spring boot 	80 to 80% 
+			12. Spring micro services 
+			13. Spring clouds 
+			
+			7. Spring security 
+			9. Spring testing 
+		12. 
+			Maven tool :
+			
+	Spring boot = Spring all modules - XML file + Few annotation + embedded Web Servers 
+								tomcat, 
+	Spring boot itself is stanalone project which help to create the web projects. 
+	
+	Spring Core 
+
+	IOC 	and 	DI 
+
+	Dependency Injection :
+
+			1. Constructor based 
+			2. Setter based 
+			3. Interface based 
+			
+
+			1. Using XMLfile 
+
+			2. Using Annotation 
+
+	Inversion of Control :
+
+	Container :
+
+	Server 
+
+		Web Server 
+				Tomcat 
+
+				MVC : Controller and View Model 
+		Application Server 
+					EJB :
+				Web Logic or jBoss 
+
+		POJO : 		
+
+	package com;
+	class Employee {
+		Employee() {
+		System.out.println("Object created....");
+		}
+		public void display() {
+		System.out.println("business method");
+		}
+	}	
+
+	beans.xml 
+
+	<beans>
+		<bean id="obj1" class="com.Employee"></bean>
+	</beans>
+
+	class DemoTest {
+		public static void  main(String args[]) {
+		//Employee emp = new Employee();
+		//emp.display();
+		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+		Employee emp = (Employee)ac.getBean("obj1");
+		emp.display();
+		}
+	}
+
+
+
+04-12-2018 : Day 2 
+
+	Spring Context with Database 
+
+		Using Datasource :
+
+		Normal JDBC 
+		
+	Spring with JDBC/Spring JDBC  
+	
+	Using jdbcTemplate 
+
+
+	Using ORM 
+			Hibernate : Framework : Implemetation 
+		JPA : Java Persistence API : Specification 
+
+		It is type of EJB 
+
+		EJB 2.x			EJB 3.x 
+		
+		Session Bean		Session Bean  
+		Entity Bean 		JPA 
+		Message Driven Bean		Message Driven Bean  
+
+		ORM : Object Relation Mapping 
+
+	Employee(class) -------->Employee (Table)
+	id PK		   ID, Name, Salary 
+	name		    PK 
+	salary 
+	@Entity 
+	class Employee {
+		@Id 
+		id
+		name
+		salary 
+	}
+		2.x   3.x 		5.x 
+						JPA 2.1 
+		Emp.hbm.xml (Mapping file)	Mapping file 
+		
+
+
+		hibernate.cfg.xml (Hibernate configuration file)	(persistence.xml) 
+			path of the Mapping file 
+		driverName
+		username
+		password 
+		url 
+		Hibernate dialets class 
+
+		Configuration con = new Configuration();
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		Employee emp = new Employee();
+		emp.setId(100);
+		emp.setName("Raj");
+		emp.setSalary(12000);
+		Transaction tran = session.getTransaction();
+		tran.begin();
+		
+			session.save(emp);
+
+		tran.commit();		
+
+		JTA : Global Transaction 
+
+		@Transactional : Global Transaction 
+
+		Spring AOP :
+
+
+
+
+
+
+
+	Using XML and Annotation 
+
+
+	DAO : 	Application Server : Weblogic. 
+	
+	Class.forName("driver name");
+	Connection con = DriveManager.getConnection(url,username,password);
+
+	
+	JPA : 
+
+		
+
+
+
+05-12-2018	Day 3 :
+
+	Spring MVC : 3/4/5
+	
+	Spring MVC Spring forms tags 
+	Spring MVC ( Controller, Service, Respository) + JDBC /Hibernate/JPA + Rest Service 
+	View --> JSP 
+	Controller ---> Service ---> Dao ---> JDBC/JdbcTemplate/Hibernate/
+			        Jpa 
+	
+		Rest Service 
+
+		View : Angular / React JS 
+
+	
+
+	Spring MVC:
+
+Rest Web Service
+		
+View ----> DispatcherServlet ()---->  Controller ----> Service -----> Dao (Persistence Layer) -----> 	
+
+	Spring MVC : Model View Controller 
+
+	Spring MVC provided front controller design pattern. 
+	DispatcherServlet. 
+	Model layer 
+	View layer 
+	Controller 
+		Spring MVC is known as Model Centric framework. 
+
+View	----> DispatcherServlet (FrontController) -----> 
+						Spring configuration file 
+HTML/JSP 	
+			Controller 
+
+			Service 
+
+			Dao layer 
+
+				Normal JDBC
+				ORM (Hibernate /JPA)
+
+index.jsp ------> say -----> web.xml (DispatcherServlet)----> dispatcher-servlet.xml (scan com package) 
+
+EmployeeController ---->
+
+@RequestMapping(value="say") 
+
+ModelAndView class reference return as a parameter 
+
+select * from employee 				select e from Employee e
+
+	Spring boot Initializer 
+	Spring boot runner 
+	Spring active profile 
+
+	Exception handling in Spring boot 
+		Spring boot Cloud server (Eureka) 
+	Acturator 
+		Spring boot admin server 
+		Spring boot admin client 
+	
+	Creating batch from spring boot application 
+	
+	
+	
+		
+	Day 4 :
+	Spring boots :
+		
+	Spring boot = Spring framework (Spring all modules) - XML file + Few Annotation 	
+
+	Spring Data : ORM 
+
+	JPA / Spring DATA 	
+	
+	Day 5 : 
+
+	Angular View + Spring boot (backend ) + JPA 
+
+	Spring boot with Microservice 
+
+
+	Day 6: 
+		Spring security / 
+		Spring testing 
+	
+		
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+		
