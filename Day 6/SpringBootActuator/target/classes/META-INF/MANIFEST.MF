@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBootActuator
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Akash
+Implementation-Vendor-Id: SpringBootProjects
+Build-Jdk: 1.8.0_91
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootAc
+ tuator/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
